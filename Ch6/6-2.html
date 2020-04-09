@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Show console with DOM</title>
+        <script>
+            function displayTime() {
+                var now = new Date();
+                console.log("Current time is" + now.toLocaleString());
+            }
+
+            //Window객체의 onload propterty에 함수 저장
+            window.onload = function() {
+                // 입력 요소 객체 가져오기
+                var button = document.getElementById("button");
+                // 클릭시 동작하는 이벤트 처리기 등록
+                button.onclick = displayTime;
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="click" id = "button">
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Basic Canvas</title>
+        <style>
+            canvas {border: 2px solid gray;}
+        </style>
+        <script>
+            window.onload = function() {
+                var canvas = document.getElementById("mycanvas");
+                var ctx = canvas.getContext("2d");
+
+                var img = new Image();
+
+                img.onload = function() {
+                    ctx.drawImage(img, 0, 0);
+                }
+                img.src = "./dog.jpg"
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id ="mycanvas" width="640" height="400"></canvas>
+    </body>
+</html>
